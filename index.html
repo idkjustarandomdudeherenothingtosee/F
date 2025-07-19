@@ -19,12 +19,7 @@ function decode() {
   let alphabet = '';
   for (let ch of alphabetRaw) {
     if (!seen.has(ch)) alphabet += ch, seen.add(ch);
-  }
-
-  if (alphabet.length !== 22) {
-    document.getElementById('output').textContent = `Alphabet must have 22 unique chars. Got: ${alphabet.length}`;
-    return;
-  }
+  };
 
   // Convert encoded string to a big integer in base22
   let number = 0n;
